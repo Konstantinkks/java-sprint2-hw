@@ -35,6 +35,7 @@ public class DataReconciliation {
         } else {
             if (totalProfit != amount) {
                 System.out.println("Доходы за " + nameMonth + " не совпадают.");
+                error ++;
             }
         }
     }

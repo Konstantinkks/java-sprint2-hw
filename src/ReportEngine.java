@@ -56,8 +56,10 @@ public class ReportEngine {
                 }
 
                 System.out.println("\n" + "Данные за " + nameOfTheMonth[i] + ":");
-                System.out.println("Самый прибыльный товар: " + monthlyReport.mostProfitableItemName + ".");
-                System.out.println("Самый затратный товар: " + monthlyReport.mostExpensiveItemName + ".");
+                System.out.println("Самый прибыльный товар: " + monthlyReport.mostProfitableItemName + "." +
+                        "\n" + "Доход составил: " + monthlyReport.maxProfit + " руб.\n");
+                System.out.println("Самый затратный товар: " + monthlyReport.mostExpensiveItemName + "." +
+                        "\n" + "Расход составил: " + monthlyReport.maxExpense + " руб.");
 
                 monthlyReport.expense = 0;
                 monthlyReport.sum = 0;

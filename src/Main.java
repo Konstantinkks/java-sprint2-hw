@@ -22,22 +22,28 @@ public class Main {
 
             int command = scanner.nextInt();
 
-            if (command == 1) {
-                reportEngine.readingMonthlyData();
-            } else if (command == 2) {
-                reportEngine.readingYearlyData();
-            } else if ( command == 3) {
-                reportEngine.dataReconciliation();
-            } else if (command == 4) {
-                reportEngine.parsingMonthlyData();
-            } else if (command == 5) {
-                reportEngine.parsingYearlyData();
-            } else if (command == 0) {
-                System.out.println("Завершение приложения...");
-                scanner.close();
-                return;
-            } else {
-                System.out.println("Такой команды нет.");
+            switch (command) {
+                case 1 :
+                    reportEngine.readingMonthlyData();
+                    break;
+                case 2 :
+                    reportEngine.readingYearlyData();
+                    break;
+                case  3 :
+                    reportEngine.dataReconciliation();
+                    break;
+                case 4 :
+                    reportEngine.parsingMonthlyData();
+                    break;
+                case 5 :
+                    reportEngine.parsingYearlyData();
+                    break;
+                case 0 :
+                    System.out.println("Завершение приложения...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Такой команды нет.");
             }
         }
     }
